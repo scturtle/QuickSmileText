@@ -1,18 +1,22 @@
 //
 //  AppDelegate.h
 //  QuickSmileText
-//
-//  Created by scturtle on 12-8-10.
-//  Copyright (c) 2012年 scturtle. All rights reserved.
+//  Written by scturtle. No rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate,
-                                   NSUserNotificationCenterDelegate>{
-    NSStatusItem *statusItem;
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>{
+
     IBOutlet NSMenu *menu;
+    IBOutlet NSTableView *table;
+    IBOutlet NSArrayController *arrayController;
+
+    NSStatusItem *statusItem;
+    NSString *plistPath;
     NSMutableDictionary *prefs;
+    NSMutableArray* smileTexts;
+    NSUserNotification *notification;
 }
 
 @property (assign) IBOutlet NSWindow *window;
