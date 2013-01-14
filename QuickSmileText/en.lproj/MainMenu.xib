@@ -112,7 +112,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{731, 367}, {300, 270}}</string>
 				<int key="NSWTFlags">1685586944</int>
-				<string key="NSWindowTitle">Window</string>
+				<string key="NSWindowTitle">Preferences</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<object class="NSToolbar" key="NSViewClass" id="755912137">
 					<object class="NSMutableString" key="NSToolbarIdentifier">
@@ -288,7 +288,7 @@
 							</object>
 						</object>
 					</dictionary>
-					<array class="NSMutableArray" key="NSToolbarIBAllowedItems">
+					<array key="NSToolbarIBAllowedItems">
 						<reference ref="359430362"/>
 						<reference ref="755444658"/>
 						<reference ref="938476104"/>
@@ -448,7 +448,7 @@
 								</object>
 								<object class="NSScroller" id="774978585">
 									<reference key="NSNextResponder" ref="945902054"/>
-									<int key="NSvFlags">256</int>
+									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{1, 255}, {300, 16}}</string>
 									<reference key="NSSuperview" ref="945902054"/>
 									<reference key="NSWindow"/>
