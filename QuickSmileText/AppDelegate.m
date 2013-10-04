@@ -56,7 +56,7 @@
     }
 }
 
-- (void) load_menu{
+- (void) load_menu {
     // clear
     NSUInteger n = [[menu itemArray] count];
     for(int i=0;i<n-3;i++)
@@ -91,7 +91,7 @@
         [arrayController addObject:[NSMutableDictionary dictionaryWithObject:smile forKey:@"smile"]];
 }
 
-- (IBAction)refresh:(id)sender {
+- (void)refresh {
     // get all items from table
     [smileTexts removeAllObjects];
     NSArray *array = [arrayController arrangedObjects];
@@ -106,10 +106,13 @@
 
 - (IBAction)add:(id)sender {
     [arrayController addObject: [NSMutableDictionary dictionaryWithObject:@"" forKey:@"smile"]];
+    [table scrollRowToVisible: [ [arrayController arrangedObjects] count] - 1];
+    [self refresh];
 }
 
 - (IBAction)remove:(id)sender {
     [arrayController removeObjectAtArrangedObjectIndex:[arrayController selectionIndex]];
+    [self refresh];
 }
 
 - (IBAction)up:(id)sender {
@@ -123,6 +126,8 @@
     for(id smile in array)
         [arrayController addObject:smile];
     [arrayController setSelectionIndex:n-1];
+    [table scrollRowToVisible: n-1];
+    [self refresh];
 }
 
 - (IBAction)down:(id)sender {
@@ -136,6 +141,8 @@
     for(id smile in array)
         [arrayController addObject:smile];
     [arrayController setSelectionIndex:n+1];
+    [table scrollRowToVisible: n+1];
+    [self refresh];
 }
 
 - (IBAction)quit:(id)sender {
